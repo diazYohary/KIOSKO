@@ -1,0 +1,229 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #707070;
+}
+
+.flex {
+  display: flex;
+}
+.centerDiv {
+  align-items: center;
+}
+.centerContent {
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.columnDiv {
+  flex-direction: column;
+}
+
+/*INPUT*/
+input {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  border: 0;
+  background-color: #dfdfdf;
+  margin: 10px;
+  height: 40px;
+  font-size: 20px;
+}
+.signIn {
+  background-color: #707070;
+  color: white;
+  font-weight: 700;
+}
+.signIn:hover {
+  background-color: #414141;
+}
+
+.searchInput {
+  text-align: left;
+  width: 80%;
+  padding-left: 10px;
+  margin: 0;
+  height: 35px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.formInput {
+  max-width: 200px;
+  margin: 10px;
+}
+/*TEXT*/
+.centerText {
+  text-align: center;
+}
+.justifyText{
+    text-align: justify;
+}
+.kioskoTitle {
+  color: #414141;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 90px;
+  letter-spacing: 8px;
+}
+.kioskoHome {
+  color: #414141;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  letter-spacing: 6px;
+}
+.noMargin {
+  margin: 0;
+}
+.link {
+  color: #707070;
+}
+.link:hover {
+  color: #414141;
+}
+
+.subtitle {
+  font-size: 17px;
+  font-weight: 700;
+  padding: 0 0 0 10px;
+}
+.sub2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.title {
+  font-size: 25px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.sideList {
+  padding: 0 0 10px 10px;
+}
+/*LINEAS*/
+.vr {
+  border-top: 2px solid #414141;
+  width: 90%;
+}
+/*MAIN*/
+.mainDiv {
+  margin-top: 2%;
+}
+.sidebar {
+  width: 15%;
+  margin-left: 5%;
+}
+.mainContent {
+  width: 75%;
+  margin-right: 5%;
+}
+.spaceRow {
+  justify-content: space-between;
+}
+
+/*IMG*/
+img {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.cover {
+  max-width: 80%;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  margin: 0 0 8px 0;
+}
+.banner {
+  width: 98%;
+  margin-top: 20px;
+  margin-top: 20px;
+  box-shadow: none;
+}
+.productImg {
+  margin: 0;
+  width: 90%;
+}
+.contCover {
+  width: 20%;
+}
+.textCover {
+  white-space: pre-wrap;
+  padding: 0;
+  height: auto;
+  font-size: 16px;
+  text-decoration: underline;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 0;
+}
+/*PROD WINDOW*/
+.prodDet {
+  width: 60%;
+}
+.prodImg {
+  width: 40%;
+  text-align: right;
+}
+.console {
+  background-color: #dfdfdf;
+  width: 400px;
+  height: 150px;
+  padding-left: 10px;
+}
+.productList {
+  text-align: left;
+  padding: 0;
+  height: auto;
+  font-size: 16px;
+  text-decoration: underline;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 0;
+}
+/*MODAL WINDOW*/
+.book{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #707070;
+    color: white;
+
+}
+
+.book:hover {
+    background-color: #414141;
+  }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
