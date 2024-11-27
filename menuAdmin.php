@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN KIOSKO</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="flex columnDiv centerDiv centerText">
         <h1 class="kioskoHome noMargin">KIOSKO</h1>
@@ -13,33 +15,41 @@
     </div>
     <div class="flex mainDiv">
         <div class="sidebar flex columnDiv">
-            <p class="subtitle">User Menu</p>
-            <a class="sideList link" href="viewUsers.php">View All Users</a>
-            <a class="sideList link" href="addUsers.php">Add User</a>
-            <a class="sideList link" href="updatePass.php">Update Password</a>
-            <a class="sideList link" href="deleteUser.php">Delete User</a>
-            <p class="subtitle">Products Menu</p>
-            <a class="sideList link" href="viewProducts.php">View All Products</a>
-            <a class="sideList link" href="addProduct.php">Add Products</a>
-            <a class="sideList link" href="">Update Products</a>
-            <a class="sideList link" href="deleteProduct.php">Delete Products</a>
-            <p class="subtitle"><a class="link" href="index.html">Log Out</a></p>
+
+            <?php
+            require_once 'menuTools.php';
+            $menu = new menu\MenuTools;
+            $menu->menu();
+            ?>
         </div>
         <div class="mainContent">
-            <?php
-            $logFile=__DIR__.'/log/webhookLog.txt';
-            $logs=file_get_contents($logFile);
-            ?>
             <div>
                 <p class="sub2">Logs</p>
-            <?php
-                    echo "<pre>" . htmlspecialchars($logs?$logs:"EMPTY LOGS") . "</pre>";
-                ?>
-                
+                <pre id="logContainer">Cargando logs...</pre>
+
             </div>
-            
-            
         </div>
     </div>
+    <script>
+       // GET LOGS
+       async function fetchLogs() {
+           try {
+               const response = await fetch('getLogs.php'); // Ruta al endpoint creado
+               if (response.ok) {
+                   const logs = await response.text(); // Obtener el contenido del log
+                   document.getElementById('logContainer').textContent = logs; // Actualizar el contenido
+               } else {
+                   console.error('Error al obtener los logs:', response.status);
+               }
+           } catch (error) {
+               console.error('Error al realizar la solicitud:', error);
+           }
+       }
+       // Actualizar los logs cada 5 segundos
+       setInterval(fetchLogs, 5000);
+       // Cargar los logs inicialmente
+       fetchLogs();
+   </script>
 </body>
+
 </html>

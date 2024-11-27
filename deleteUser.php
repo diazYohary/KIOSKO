@@ -15,17 +15,11 @@
     </div>
     <div class="flex mainDiv">
         <div class="sidebar flex columnDiv">
-        <p class="subtitle">User Menu</p>
-            <a class="sideList link" href="viewUsers.php">View All Users</a>
-            <a class="sideList link" href="addUsers.php">Add User</a>
-            <a class="sideList link" href="updatePass.php">Update Password</a>
-            <a class="sideList link" href="deleteUser.php">Delete User</a>
-            <p class="subtitle">Products Menu</p>
-            <a class="sideList link" href="viewProducts.php">View All Products</a>
-            <a class="sideList link" href="addProduct.php">Add Products</a>
-            <a class="sideList link" href="">Update Products</a>
-            <a class="sideList link" href="deleteProduct.php">Delete Products</a>
-            <p class="subtitle"><a class="link" href="index.html">Log Out</a></p>
+            <?php
+            require_once 'menuTools.php';
+            $menu = new menu\MenuTools;
+            $menu->menu();
+            ?>
         </div>
         <div class="mainContent">
 

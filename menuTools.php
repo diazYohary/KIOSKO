@@ -6,6 +6,7 @@ class MenuTools
 {
     public function menu()
     {
+        echo '<p class="subtitle"><a class="link" href="menuAdmin.php">Home</a></p>';
         echo '<p class="subtitle">User Menu</p>';
         echo '<a class="sideList link" href="viewUsers.php">View All Users</a>';
         echo '<a class="sideList link" href="addUsers.php">Add User</a>';
